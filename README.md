@@ -12,6 +12,9 @@
 - Requires C++14 standard or higher.
 - Works on Linux and macOS operating systems.
 
+## Building a project
+To build the project, run the Python script - build.py
+
 ## Disclaimer
 This tool is intended for educational purposes and testing servers under your control only. Using INA for illegal activities against servers you do not own violates the law.
 
