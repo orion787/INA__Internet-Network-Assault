@@ -5,7 +5,7 @@
 ## Key Features
 - 🚀 **High load**: Sending multiple HTTP requests to the target host to test its resilience.
 - 🧵 **Multithreading**: Supports parallel query execution for maximum performance.
-- ⚙️ **Flexible settings**: Easily set the number of threads and requests through the parameters.
+- ⚙️ **Flexible settings**: Easily set the number of threads and requests through the parameters via config file.
 
 ## Technical Details
 - Written in C++.
