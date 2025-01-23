@@ -1,0 +1,5 @@
+target_host=127.0.0.1
+target_port=5000
+thread_count=8
+request_count=100
+attack_type=http
