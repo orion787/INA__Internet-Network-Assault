@@ -6,7 +6,7 @@ def build_project():
     project_dir = os.getcwd()
     src_dir = os.path.join(project_dir, "src")
     build_dir = os.path.join(project_dir, "build")
-    output_file = os.path.join(build_dir, "ddos_simulator")
+    output_file = os.path.join(build_dir, "ina.out")
 
     # Создаём директорию build, если она не существует
     if not os.path.exists(build_dir):
