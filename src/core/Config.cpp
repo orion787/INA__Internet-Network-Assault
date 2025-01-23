@@ -2,6 +2,16 @@
 #include <fstream>
 #include <sstream>
 #include <iostream>
+#include <algorithm> // Для trim
+#include <cctype>
+
+// Функция для обрезки пробелов (trim)
+static std::string trim(const std::string& str) {
+    size_t first = str.find_first_not_of(" \t\n\r");
+    if (first == std::string::npos) return ""; // Пустая строка
+    size_t last = str.find_last_not_of(" \t\n\r");
+    return str.substr(first, last - first + 1);
+}
 
 Config::Config(const std::string& filepath) {
     std::ifstream file(filepath);
@@ -14,6 +24,8 @@ Config::Config(const std::string& filepath) {
         std::istringstream iss(line);
         std::string key, value;
         if (std::getline(iss, key, '=') && std::getline(iss, value)) {
+            key = trim(key); // Удаляем пробелы вокруг ключа
+            value = trim(value); // Удаляем пробелы вокруг значения
             configData[key] = value;
         }
     }
